@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 
     <style>
-      body .slides {
-        transform: scale(0.65);
+      body .slides * {
+        transform: scale(0.85);
       }
     </style>
   </head>
@@ -496,13 +496,15 @@
           </section>
 
           <section>
-            <h2>Conditionals (<code style="text-transform: lowercase;">if</code>)</h2>
+            <h2>Condicionales (<code style="text-transform: lowercase;">if</code>)</h2>
             <p>
-              The programs need to take decisions (execute or not a bunch of code).<br />
-              These decisions are based on a condition.<br />
-              A condition is a question whose answer is a boolean value:
-              <code>true</code> or <code>false</code>.<br /><br />
-              With the <code>if</code> statement JS make a conditional.
+              Los programas necesitan tomar decisiones (ejecutar o no un pedazo de codigo).<br />
+              Estas decisiones estan basadas en una condicion.<br />
+              Una <em>condicion</em> es una pregunta cuya respuesta es un valor
+              booleano:
+              <em>falso</em> o <em>verdadero</em>.<br /><br />
+              Con la instruccion <code>if</code> podemos hacer una condicional en
+              JS.
             </p>
             <pre><code class="hljs">
               if (condition) {
@@ -514,7 +516,7 @@
           <section>
             <p>Example (if):</p>
             <pre><code class="hljs">
-              var x = 5;
+              const x = 5;
 
               if (x > 0) {
                 console.log('x is a positive number!');
@@ -527,45 +529,45 @@
           </section>
 
           <section>
-            <h2>Comparision operators</h2>
-            <pre><code class="hljs">var n = 28;</code></pre>
+            <h2>Operadores de comparacion</h2>
+            <pre><code class="hljs">const n = 28;</code></pre>
             <table>
               <thead>
                 <tr>
-                  <th>Operator symbol</th>
-                  <th>Name</th>
-                  <th>Example</th>
+                  <th>Simbolo</th>
+                  <th>Nombre</th>
+                  <th>Ejemplo</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>===</td>
-                  <td>Strict equality</td>
+                  <td>Igualdad estricta</td>
                   <td>n == 28<br />n === '28'</td>
                 </tr>
                 <tr>
                   <td>!==</td>
-                  <td>Strict inequality</td>
+                  <td>Inegualdad estricta</td>
                   <td>n !== 28<br />n !== '28'</td>
                 </tr>
                 <tr>
                   <td>&gt;</td>
-                  <td>Greater than</td>
+                  <td>Mayor que</td>
                   <td>n &gt; 25<br />n &gt; 30</td>
                 </tr>
                 <tr>
                   <td>&lt;</td>
-                  <td>Lower than</td>
+                  <td>Menor que</td>
                   <td>n &lt; 31<br />n &lt; 23</td>
                 </tr>
                 <tr>
                   <td>&gt;=</td>
-                  <td>Greater or equal than</td>
+                  <td>Mayor o igual que</td>
                   <td>n &gt;= 28</td>
                 </tr>
                 <tr>
                   <td>&lt;=</td>
-                  <td>Lower or equal than</td>
+                  <td>Menor o igual que</td>
                   <td>n &lt;= 28</td>
                 </tr>
               </tbody>
@@ -573,10 +575,10 @@
           </section>
 
           <section>
-            <h2>Logical operators</h2>
+            <h2>Operadores logicos</h2>
             <pre><code class="hljs">
-              var a = 4;
-              var b = -2;
+              const a = 4;
+              const b = -2;
             </code></pre>
             <table>
               <thead>
