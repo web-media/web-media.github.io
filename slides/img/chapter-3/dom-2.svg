@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="621" height="264" viewBox="0 0 621 264" style="background-color: white;">
+  <title>Asset 2</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_2-2" data-name="Layer 2">
+      <rect x="194" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #9ff"/>
+      <text transform="translate(206 21.25)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">docume<tspan x="62.0454" y="0" style="letter-spacing: -0.003987630208333333em">n</tspan><tspan x="71.9634" y="0">t</tspan></text>
+      <g>
+        <rect x="194" y="44" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #99f"/>
+        <text transform="translate(218.6665 65)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">&lt;<tspan x="10.728" y="0" style="letter-spacing: -0.003987630208333333em">h</tspan><tspan x="20.646" y="0" style="letter-spacing: -0.00002712673611111111em">tml&gt;</tspan></text>
+      </g>
+      <g>
+        <rect x="67" y="101" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #99f"/>
+        <text transform="translate(87.6665 122)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">&lt;head&gt;</text>
+      </g>
+      <g>
+        <rect x="125" y="149" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #99f"/>
+        <text transform="translate(149.6665 170)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">&lt;link&gt;</text>
+      </g>
+      <g>
+        <line x1="289.5" y1="201.5" x2="289.5" y2="139.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <g>
+          <rect x="355" y="101" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #99f"/>
+          <text transform="translate(379.6665 122)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">&lt;body&gt;</text>
+        </g>
+        <g>
+          <rect x="467" y="149" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #99f"/>
+          <text transform="translate(503.6665 170)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">&lt;p&gt;</text>
+        </g>
+        <g>
+          <rect x="405" y="197" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #ff9"/>
+          <text transform="translate(441.6665 218.3335)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro;letter-spacing: -0.005995008680555556em">t<tspan x="5.8501" y="0" style="letter-spacing: -0.0030110677083333335em">e</tspan><tspan x="14.814" y="0" style="letter-spacing: 0.012993706597222222em">x</tspan><tspan x="23.3818" y="0" style="letter-spacing: -0.00002712673611111111em">t</tspan></text>
+        </g>
+        <line x1="518" y1="179" x2="518" y2="188" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <line x1="570.5" y1="188.5" x2="518.5" y2="188.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <line x1="518.5" y1="188.5" x2="447.5" y2="188.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <line x1="447.5" y1="197.5" x2="447.5" y2="188.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <line x1="570.5" y1="253.5" x2="570.5" y2="188.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <g>
+          <rect x="519" y="197" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #99f"/>
+          <text transform="translate(555.6665 218)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">&lt;b&gt;</text>
+        </g>
+        <g>
+          <rect x="520" y="234" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #ff9"/>
+          <text transform="translate(556.6665 255.3335)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro;letter-spacing: -0.005995008680555556em">t<tspan x="5.8501" y="0" style="letter-spacing: -0.0030110677083333335em">e</tspan><tspan x="14.814" y="0" style="letter-spacing: 0.012993706597222222em">x</tspan><tspan x="23.3818" y="0" style="letter-spacing: -0.00002712673611111111em">t</tspan></text>
+        </g>
+        <line x1="405" y1="131" x2="405" y2="157.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <line x1="517.5" y1="148.5" x2="517.5" y2="139.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <line x1="404.5" y1="139.5" x2="517.5" y2="139.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <line x1="289.5" y1="139.5" x2="404.5" y2="139.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+        <g>
+          <rect x="354" y="149" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #99f"/>
+          <text transform="translate(377.6665 170)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">&lt;img&gt;</text>
+        </g>
+        <g>
+          <rect x="239" y="149" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #99f"/>
+          <text transform="translate(268.6665 170)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">&lt;h1&gt;</text>
+        </g>
+        <g>
+          <rect x="239" y="193" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #ff9"/>
+          <text transform="translate(275.6665 214.3335)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro;letter-spacing: -0.005995008680555556em">t<tspan x="5.8501" y="0" style="letter-spacing: -0.0030110677083333335em">e</tspan><tspan x="14.814" y="0" style="letter-spacing: 0.012993706597222222em">x</tspan><tspan x="23.3818" y="0" style="letter-spacing: -0.00002712673611111111em">t</tspan></text>
+        </g>
+      </g>
+      <line x1="117" y1="131" x2="117" y2="139" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <line x1="175.5" y1="148.5" x2="175.5" y2="138.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <line x1="53.5" y1="199.5" x2="53.5" y2="139.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <line x1="53.5" y1="139.5" x2="116.5" y2="138.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <line x1="116.5" y1="138.5" x2="175.5" y2="138.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <g>
+        <rect x="1" y="149" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #99f"/>
+        <text transform="translate(27.6665 170)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro">&lt;title&gt;</text>
+      </g>
+      <g>
+        <rect y="193" width="101" height="30" rx="5.5952" ry="5.5952" style="fill: #ff9"/>
+        <text transform="translate(36.6665 214.3335)" style="font-size: 18px;font-family: MyriadPro-Regular, Myriad Pro;letter-spacing: -0.005995008680555556em">t<tspan x="5.8501" y="0" style="letter-spacing: -0.0030110677083333335em">e</tspan><tspan x="14.814" y="0" style="letter-spacing: 0.012993706597222222em">x</tspan><tspan x="23.3818" y="0" style="letter-spacing: -0.00002712673611111111em">t</tspan></text>
+      </g>
+      <line x1="244" y1="30" x2="244" y2="44" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <line x1="243.5" y1="73.5" x2="243.5" y2="86.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <line x1="405.5" y1="100.5" x2="405.5" y2="86.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <line x1="117.5" y1="100.5" x2="117.5" y2="86.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <line x1="117.5" y1="86.5" x2="243.5" y2="86.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+      <line x1="243.5" y1="86.5" x2="405.5" y2="86.5" style="fill: none;stroke: #000;stroke-miterlimit: 10"/>
+    </g>
+  </g>
+</svg>

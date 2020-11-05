@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="378" height="378" viewBox="0 0 378 378">
+  <title>Asset 1</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_2-2" data-name="Layer 2">
+      <rect width="378" height="378" rx="188.9998" ry="188.9998" style="fill: #05a086"/>
+      <g id="Layer_1-2" data-name="Layer 1">
+        <rect x="127" y="134" width="216" height="216" rx="107.9999" ry="107.9999" style="fill: #3ab3ef"/>
+        <text transform="translate(216 252)" style="font-size: 21px;font-family:arial;">WEB</text>
+        <text transform="translate(97 72)" style="font-size: 21px;font-family:arial;"><tspan style="letter-spacing: 0.00999813988095238em">I</tspan><tspan x="5.229" y="0" style="letter-spacing: -0.003999255952380952em">n</tspan><tspan x="16.7998" y="0" style="letter-spacing: -0.005998883928571429em">t</tspan><tspan x="23.6245" y="0">e</tspan><tspan x="34.1455" y="0" style="letter-spacing: 0.003999255952380952em">r</tspan><tspan x="41.0962" y="0">net</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>JS Course | Chapter 2</title>
+
+    <meta name="description" content="Support material for the course Web media.">
+    <meta name="author" content="Diego Montesinos">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+    <style>
+      body .slides {
+        transform: scale(0.65);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <h3>2. JavaScript</h3>
+          <img width="550" data-src="img/chapter-2/java-javascript.jpg">
+        </section>
+
+        <!-- JavaScript intro -->
+        <section>
+          <section>
+            <h2>2.1 ¿Qué es programar?</h2>
+          </section>
+
+          <section>
+            <h3>Códigos</h3>
+            <ul class="fragment">
+              <li>Morse</li>
+              <li>Codigo civil</li>
+              <li>El ADN</li>
+            </ul>
+            <br />
+            <img class="fragment" width="350" data-src="img/chapter-2/senales.jpg">
+          </section>
+
+          <section>
+            <p>
+              Cuando programamos, nos interesan los códigos que transmiten un tipo de idea:
+            </p>
+            <h4 class="fragment">
+              INSTRUCCIONES
+            </h4>
+          </section>
+
+          <section>
+            <h2>Algoritmos</h2>
+            <b>Algoritmo.</b>Una lista ordenada de pasos cuyo proposito es hacer algo,
+            y debe ser entendible para aquellos que lo haran (o ejecutaran).
+            <br />
+            <img class="fragment" width="250" data-src="img/chapter-2/recipe.jpg">
+          </section>
+
+          <section>
+            <h2>¿Qué es programar?</h2>
+            <p>
+              Simple, programar es escribir algoritmos en un lenguaje de programación.
+              <br />
+              Asi mismo, un <b>Lenguaje de Programación</b>, es un lenguaje formal
+              que definido por una sintaxis y una semantica (igual que el Español).
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>2.2 Javascript: El lenguaje de programación de la web</h2>
+            <p>
+              JavaScript es un lenguaje interpretado, y es comúnmente abreviado
+              como JS.<br />
+              Cada navegador tiene su propio intèrprete de JavaScript, tambien
+              llamado <i>engine</i>.<br /><br />
+              Los programas escritos en JavaScript son llamados <i>scripts</i>.
+            </p>
+          </section>
+
+          <section>
+            <h2>Historia</h2>
+            <ul class="history">
+              <li>1995: En Netscape, Brendan Eich crea "JavaScript".</li>
+              <li>1996: Microsoft lanza "JScript", una copia para IE3.</li>
+              <li>1997: JavaScript se estandariza en la especificacion "ECMAScript".</li>
+              <li>2005: Se crea "AJAX" y comienza la era de la Web 2.0.</li>
+              <li>2010: Node.JS fue lanzado.</li>
+              <li>2015: ECMAScript 6 fue lanzado.</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>2.3 JavaScript: Variables</h2>
+            <img width="550" data-src="img/chapter-2/postits.jpg">
+          </section>
+
+          <section>
+            <h2>¿Qué es una variable?</h2>
+            <p>
+              Necesitamos almacenar datos: la puntuacion en un juego, el nombre
+              del usuario, etc.<br />
+              Una <em>variable</em> es un valor nombrado (o un valor con un significado),
+              que representa un dato.<br />
+              El valor de la variable puede cambiar, pero su significado nunca.<br />
+              Podemos ver las variables como contenedores de valor.<br />
+              <img width="300" data-src="img/chapter-2/value-container.jpg">
+            </p>
+          </section>
+
+          <section>
+            <h2>Sintaxis</h2>
+            <p>
+              Para declarar e inicializar una variable, debemos seguir la siguiente
+              sintaxis:
+            </p>
+            <pre><code class="hljs">
+              // let name;
+              let x;
+              // name = value;
+              x = 5;
+            </code></pre>
+            <p>
+              O todo en una sola linea de codigo.
+            </p>
+            <pre><code class="hljs">
+              // let name = value;
+              let x = 5;
+            </code></pre>
+            <p>
+              Para sustituir o reasignar un valor:
+            </p>
+            <pre><code class="hljs">
+              let x = 5;
+              x = 1;
+            </code></pre>
+          </section>
+
+          <section>
+            <p>
+              En versiones anteriores a la ES6, se ocupaba la sintaxis:
+              <pre><code class="hljs">
+                var name = value;
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Operador de asignación</h2>
+            <p>
+              El símbolo <code>=</code> representa una asignación. Su funcion es
+              asignar el valor que esta a su lado DERECHO a la variable que esta
+              en su lado IZQUIERDO.
+              Si se necesita, el valor debe ser calculado antes de la asignación.
+            </p>
+            <pre><code class="hljs">
+              let width = 50;
+              let areaTriangle = (width * 100) / 2;
+              // Usa console.log para imprimir un valor
+              console.log(areaTriangle);
+            </code></pre>
+            <img width="500" data-src="img/chapter-2/assign.svg">
+          </section>
+
+          <section>
+            <h2>Tipos de datos primitivos</h2>
+            <p>
+              <b>String:</b> Secuencia de caracteres.
+              <pre><code class="hljs">
+                let greeting = 'Hello Diego';
+                let greatUniversity = "CENTRO";
+              </code></pre>
+
+              <b>Numero:</b> Enteros o de punto flotante.
+              <pre><code class="hljs">
+                let myAge  = 5;
+                let myDebt = 9.10;
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Tipos de datos primitivos</h2>
+            <p>
+              <b>Booleano:</b> Representa un valor logico: <code>false</code> o
+              <code>true</code>.
+              <pre><code class="hljs">
+                let catsAreBest = true;
+                let isRaining   = false;
+              </code></pre>
+
+              <b>undefined:</b> Representa un valor que no ha sido definido.
+              <pre><code class="hljs">
+                let absoluteTruth;
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Debilmente tipado</h2>
+            <p>
+              JS es un lenguaje de programación debilmente tipado. Esto significa
+              que no debes especificar el tipo de dato cuando una variable es
+              declarada.<br />
+              JS averigua el tipo en base a su valor, y el tipo puede cambiar.
+              <pre><code class="hljs">
+                let myName = 'Diego';
+                myName = 2;
+                myName = true;
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Constantes</h2>
+            <p>
+              Por motivos de eficiencia, si el valor de una variable es constante,
+              es mejor declararla como:
+              <pre><code class="hljs">
+                const x = 10;
+              </code></pre>
+              OJO: Esto solo funciona en la version ES6.
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>2.4 Comentarios</h2>
+            <p>
+              Los comentarios son instrucciones ignoradas por la computadora y
+              su motivo son que los humanos entiendan codigo no obvio o para
+              documentacion.
+              <pre><code class="hljs">
+                // Single line comments
+                let x = 4;
+
+                /*
+                 Comments in multiple lines (for long descriptions)
+                */
+              </code></pre>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>2.4 Funciones</h3>
+            <p>
+              A menudo vamos a necesitar repetir una tarea muchas veces, y es muy
+              molesto y confuso escribir la misma pieza de codigo repetidamente.
+              <br />
+              <pre><code class="hljs">
+                let radius = 10.0;
+                const pi = 3.1416;
+                const areaCircle = pi * radius * radius;
+
+                radius = 30.0;
+                const areaCircle2 = pi * radius * radius;
+              </code></pre>
+              Las funciones "encapsulan" una tarea, que podemos ver como una sola
+              linea de codigo.<br />
+              <pre><code class="hljs">
+                const areaCircle = calculateArea(10.0);
+                const areaCircle2 = calculateArea(30.0);
+              </code></pre>
+              Las funciones hacen el codigo mas legible y reusable.
+            </p>
+          </section>
+
+          <section>
+            <h2>Aspectos de las funciones</h2>
+            <p>
+              <ul>
+                <li>
+                  Son modulos "auto-contenidas" que se enfocan en resolver una tarea
+                  especifica.
+                </li>
+                <li>Usualmente "toman" valores, los procesan y "regresan" un resultado.</li>
+                <li>Los valores que toman son los datos de entrada o los <em>argumentos</em>.</li>
+                <li>Una vez que es escrita, se puede usar una y otra vez.</li>
+                <li>JS provee muchas funciones ya listas para usarse.</li>
+                <li>Una vez escrita, nos dejamos de preocupar como es que hace lo que
+                  hace y solo "la ocupamos".</li>
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Sintaxis</h2>
+            <p>
+              Para <em>definir</em> una funcion:
+              <pre><code class="hljs">
+
+                // ES5:
+                function functionName (arguments) {
+                  // Function body
+                  // ...
+                }
+
+                // ES6:
+                const functionName = (arguments) => {
+                  // Function body
+                  // ...
+                };
+              </code></pre>
+
+              Note que en la version ES6, necesitamos una constante para guardar
+              una funcion.
+            </p>
+          </section>
+
+          <section>
+            <h2>Sintaxis</h2>
+            <p>
+              Una vez definida una funcion, podemos llamarla usando parentesis y
+              pasando los valores de los argumentos:
+              <pre><code class="hljs">
+                functionName(values);
+              </code></pre>
+            </p>
+            Empecemos por funciones simples que no reciben argumentos y no devuelven
+            un valor.
+          </section>
+
+          <section>
+            <h2>Ejemplo</h2>
+            <pre><code>
+              const sayHello = () => {
+                console.log('Hello!');
+              };
+
+              sayHello();
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Argumentos</h2>
+            <p>
+              Las funciones pueden necesitar datos para realizar la tarea deseada.
+              <br /><br />
+              Esos datos son llamados argumentos o datos de entrada, y funcionan
+              como variables predefinidas dentro de la funcion. Los valores de
+              los argumentos son dados por quien la manda a llamar.
+            </p>
+            <pre><code class="hljs">
+              // ES5:
+              function functionName (arg1, arg2, arg3, ...) {
+                // function body
+              }
+
+              // ES6:
+              const functionName = (arg1, arg2, arg3, ...) => {
+                // function body
+              };
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Ejemplos</h2>
+            <pre><code>
+              const sayHello = (name) => {
+                console.log('Hello' + name + '!');
+              };
+
+              sayHello('Diego');
+              sayHello('Esther');
+
+              const addNumbers = (num1, num2) => {
+                var result = num1 + num2;
+                console.log(result);
+              };
+
+              addNumbers(7, 21);
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Valores de retorno</h2>
+            <p>
+              Muy comunmente, las funciones regresan algun tipo de valor. Para
+              ello usamos la palabra <code>return</code> seguido del valor a
+              regresar.
+            </p>
+            <pre><code class="hljs">
+              const functionName = () => {
+                // ... 
+                return x;
+              };
+            </code></pre>
+            Cabe aclarar que el valor de regreso puede ser una literal, una variable
+            o una constante:
+            <pre><code class="hljs">
+              let x = 10;
+              return x;
+
+              return false;
+
+              const name = 'Pedrito';
+              return name;
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Valores de retorno</h2>
+            <p>
+              Tambien es importante decir que despues de la instruccion <code>return</code>
+              ningun codigo debajo se ejecutara.
+              <pre><code class="hljs">
+                const functionName = () => {
+                  // ...
+                  return x;
+
+                  // Esto NUNCA se va a ejecutar
+                  console.log(123);
+                  const a = x + 100;
+                };
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Ejemplo</h2>
+            <pre><code class="hljs">
+              const addNumbers = (num1, num2) {
+                var result = num1 + num2;
+                return result;
+              };
+  
+              var sum = addNumbers(5, 2);
+              console.log(sum);
+  
+              var biggerSum = addNumbers(2, 5) + addNumbers(3, 2);
+  
+              var hugeSum = addNumbers(addNumbers(5, 2), addNumbers(3, 7));
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Alcance de una variable</h2>
+            <p>
+              Las variables solo "viven", es decir, estan definidas en el bloque 
+              del código (como el cuerpo de una funcion) donde esta definida.<br />
+              Esto significa que sera visible en la funcion que esta definida.<br /><br />
+              Las partes del codigo donde una variable es visible es llamada su
+              "alcance" o su <em>scope</em>.
+            </p>
+          </section>
+
+          <section>
+            <p>Alcance local</p>
+            <pre><code class="hljs">
+              const addNumbers = (num1, num2) => {
+                var result = num1 + num2;
+                console.log("The result is: " + result);
+              };
+
+              addNumbers(5, 7);
+              console.log(result);
+            </code></pre>
+
+            <p>Alcance global</p>
+            <pre><code class="hljs">
+              let result;
+              const addNumbers = (num1, num2) => {
+                result = num1 + num2;
+                console.log("The result is: " + result);
+              };
+
+              addNumbers(5, 7);
+              console.log(result);
+            </code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>2.5 Control de flujo del codigo</h3>
+            <p>
+              The last code bender.
+            </p>
+            <img width="650" data-src="https://media.giphy.com/media/GVHNuTe9qCfmw/giphy.gif">
+          </section>
+
+          <section>
+            <h2>Conditionals (<code style="text-transform: lowercase;">if</code>)</h2>
+            <p>
+              The programs need to take decisions (execute or not a bunch of code).<br />
+              These decisions are based on a condition.<br />
+              A condition is a question whose answer is a boolean value:
+              <code>true</code> or <code>false</code>.<br /><br />
+              With the <code>if</code> statement JS make a conditional.
+            </p>
+            <pre><code class="hljs">
+              if (condition) {
+                // statements to execute
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <p>Example (if):</p>
+            <pre><code class="hljs">
+              var x = 5;
+
+              if (x > 0) {
+                console.log('x is a positive number!');
+              }
+
+              if (isRaining()) {
+                useUmbrella();
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Comparision operators</h2>
+            <pre><code class="hljs">var n = 28;</code></pre>
+            <table>
+              <thead>
+                <tr>
+                  <th>Operator symbol</th>
+                  <th>Name</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>===</td>
+                  <td>Strict equality</td>
+                  <td>n == 28<br />n === '28'</td>
+                </tr>
+                <tr>
+                  <td>!==</td>
+                  <td>Strict inequality</td>
+                  <td>n !== 28<br />n !== '28'</td>
+                </tr>
+                <tr>
+                  <td>&gt;</td>
+                  <td>Greater than</td>
+                  <td>n &gt; 25<br />n &gt; 30</td>
+                </tr>
+                <tr>
+                  <td>&lt;</td>
+                  <td>Lower than</td>
+                  <td>n &lt; 31<br />n &lt; 23</td>
+                </tr>
+                <tr>
+                  <td>&gt;=</td>
+                  <td>Greater or equal than</td>
+                  <td>n &gt;= 28</td>
+                </tr>
+                <tr>
+                  <td>&lt;=</td>
+                  <td>Lower or equal than</td>
+                  <td>n &lt;= 28</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2>Logical operators</h2>
+            <pre><code class="hljs">
+              var a = 4;
+              var b = -2;
+            </code></pre>
+            <table>
+              <thead>
+                <tr>
+                  <th>Operator symbol</th>
+                  <th>Name</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>&amp;&amp;</td>
+                  <td>AND</td>
+                  <td>a &gt; 0 &amp;&amp; b &lt; 0<br />4 &gt; 0 &amp;&amp; -2 &lt; 0</td>
+                </tr>
+                <tr>
+                  <td>||</td>
+                  <td>OR</td>
+                  <td>a &gt; 0 || b &gt; 0<br />4 &gt; 0 || -2 &gt; 0</td>
+                </tr>
+                <tr>
+                  <td>!</td>
+                  <td>NOT</td>
+                  <td>!(a === b) <br /> !(a &lt; 0)</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <p>
+              Can combining together multiple conditions (be careful with the
+              parenthesis):
+            </p>
+            <pre><code class="hljs">
+              var myAge = 28;
+
+              if ((myAge > 0 && myAge < 5) || (myAge > 70)) {
+                console.log('MB free!');
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Using values as <code style="text-transform: lowercase;">false</code></h2>
+            <p>
+              The empty string (''), the number 0, <code>undefined</code> and
+              <code>null</code> act as <code>false</code>.
+            </p>
+            <pre><code class="hljs">
+              var name = '';
+              if (name) {
+                console.log('Hello, ' + name);
+              }
+
+              var points = 0;
+              if (points) {
+                console.log('You have ' + points + ' points');
+              }
+
+              var firstName;
+              if (firstName) {
+                console.log('Your name is ' + firstName);
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Complete conditionals: <code style="text-transform: lowercase;">if-else</code></h2>
+            <p>
+              To make a complete conditionals: code that is executed when the
+              condition is satisfied and code when not.
+            </p>
+            <pre><code class="hljs">
+              var age = 18;
+              if (age > 16) {
+                console.log('Yay, you can drive!');
+              } else {
+                console.log('Sorry, but you have ' + (16 - age) + ' years til you can drive.');
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Multiple conditionals: <code style="text-transform: lowercase;">if-else if-else</code></h2>
+            <pre><code class="hljs">
+              var age = 20;
+              if (age >= 35) {
+                console.log('You can vote AND hold any place in government!');
+              } else if (age >= 25) {
+                console.log('You can vote AND run for the Senate!');
+              } else if (age >= 18) {
+                console.log('You can vote!');
+              } else {
+                console.log('You have no voice in government!');
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Iterations (<code style="text-transform: lowercase;">while</code>)</h2>
+            <p>
+              Repeat a task multiple times is make iterations.<br />
+              Are two ways to view the iterations: until a condition it no longer
+              satisfied or counting.<br /><br />
+              For the first way, JS use the statement <code>while</code>.
+            </p>
+            <pre><code class="hljs">
+              while (condition) {
+                // statements to repeat
+              }
+            </code></pre>
+            <pre><code class="hljs">
+              var x = 0;
+              while (x < 5) {
+                console.log(x);
+                x = x + 1;
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>BEWARE INFINITE LOOPS</h2>
+            <img data-src="img/chapter-2/infiniteloop.png">
+          </section>
+
+          <section>
+            <h2>Iterations (<code style="text-transform: lowercase;">for</code>)</h2>
+            <p>
+              The other way to make iterations is counting.
+            </p>
+            <pre><code class="hljs">
+              for (initialize; condition; update) {
+                // statements to repeat
+              }
+            </code></pre>
+            <pre><code class="hljs">
+              for (var i = 0; i < 5; i = i + 1) {
+                console.log(i);
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Break a loop</h2>
+            <p>
+              To prematurely exit a loop, use the <code>break</code> statement.
+            </p>
+            <pre><code class="hljs">
+              for (var current = 100; current < 200; current++) {
+                console.log('Testing ' + current);
+                if (current % 7 == 0) {
+                  console.log('Found it! ' + current);
+                  break;
+                }
+              }
+            </code></pre>
+          </section>
+        </section>
+
+        <!-- 2.5.5 Arrays -->
+        <section>
+          <section>
+            <h2>2.5.5 JavaScript: Arrays</h2>
+            <p>
+              For hold multiple values in one single variable we can use arrays.<br />
+              An array is a type of data-type that holds an ordered list of values,
+              of any type.
+            </p>
+            <img data-src="img/chapter-2/caj.jpg">
+          </section>
+
+          <section>
+            <h2>Syntax</h2>
+            <pre><code class="hljs">
+              var arrayName = [element0, element1, ...];
+              var arrayName = [];
+            </code></pre>
+            <pre><code class="hljs">
+              var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+              var raceWinners = [33, 72, 64];
+              var myFavoriteThings = ['Play guitar', 666, 'Web media course'];
+            </code></pre>
+            <p>The <code>length</code> property reports the size of the array:</p>
+            <pre><code class="hljs">console.log(courseStudents.length);</code></pre>
+          </section>
+
+          <section>
+            <h2>Array access</h2>
+            <p>You can access items with "bracket notation". The index starts at 0.</p>
+            <pre><code class="hljs">
+              var arrayItem = arrayName[indexNum];
+            </code></pre>
+            <pre><code class="hljs">
+              var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+              var firstColor = rainbowColors[0];
+              var lastColor = rainbowColors[6];
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Modification</h2>
+            <p>You can also use bracket notation to change the item in an array:</p>
+            <pre><code class="hljs">
+              var myFavoriteThings = ['Play guitar', 666, 'Web media course'];
+              myFavoriteThings[0] = 'Drunk beer';
+            </code></pre>
+            <pre><code class="hljs">
+              myFavoriteThings.push('Coding');
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Functions as variables</h2>
+            <p>
+              JS is a "first-class" language: support treat the functions like a
+              variable.
+            </p>
+            <pre><code class="hljs">
+              function mistery(otherFunction, a, b) {
+                return otherFunction(a) + otherFunction(b);
+              };
+
+              function g(x) {
+                return x * x;
+              }
+
+              var f = function(x) {
+                return x + x;
+              }
+
+              mistery(g, 4, 9);
+              mistery(f, 4, 9);
+            </code></pre>
+          </section>
+        </section>
+
+        <!-- 2.5.6 Objects -->
+        <section>
+          <section>
+            <h2>2.5.6 JavaScript: Objects</h2>
+            <p>
+              One of the most popular and useful concept in modern code is the
+              objected-oriented programming (OOP).<br />
+              <ul>
+                <li>
+                  The goal of the POO is get a model of a "world" with entities,
+                  called <b>objects</b>, and its actions and relations with other objects.
+                </li>
+                <li>
+                  Its called "objects", because can be compared with objects in real life.
+                </li>
+                <li>
+                  This <b>paradigm</b> is useful because its easy view a script thinking
+                  in objects and situations in real life. So programming is like
+                  to write a film script.
+                </li>
+              </ul>
+              <img data-src="img/chapter-2/chessboard.png" width="430" />
+            </p>
+          </section>
+
+          <section>
+            <h2>How to model an object of a "world"?</h2>
+            <img data-src="img/chapter-2/cellphone.jpg" width="230">
+            <img data-src="img/chapter-2/hotel.jpg" width="306">
+            <img data-src="img/chapter-2/car.jpg" width="365">
+          </section>
+
+          <section>
+            <p>An <b>object type</b> is defined by its: characteristics and capabilities.</p>
+            characteristics
+            <div><img data-src="img/chapter-2/car.jpg" width="270"></div>
+            <div><img data-src="img/chapter-2/car-desc.png" height="280"></div>
+            <p>Each object is an <b>instance of</b> an object type.</p>
+          </section>
+
+          <section>
+            <h2>Objects in JavaScript</h2>
+            <p>
+              <ul>
+                <li>JavaScript is designed on a really simple object-based paradigm.</li>
+                <li>JavaScript has a multiple predefined objects.</li>
+                <li>To the characteristics of an object we called its <em>properties</em>.</b></li>
+                <li>To the capabilities of an object we called its <em>methods</em></b>.</li>
+                <li>Exist two ways to create an object: literal way, and Prototype way (using new).</li>
+                <li>
+                  In the literal method, we use the curly brackets:
+                  <pre><code class="hljs">
+                    {}; // This is an object
+
+                    var objectName = {};
+                  </code></pre>
+                </li>
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Object Properties</h2>
+            <p>
+              <ul>
+                <li>Each property is an association of a key, or name, and a value.</li>
+                <li>A property can be seen as a variable attached to the object.</li>
+                <li>An object cannot have two properties with the same key.</li>
+                <li>The property key is separated of its value with a colon.</li>
+                <li>Each property is separate by a coma (EXCEPT THE LAST ONE).</li>
+                <li>
+                  Example:
+                  <pre><code class="hljs">
+                    var object = {
+                      property1 : value1,
+                      property2 : value2
+                    };
+
+                    var myCar = {
+                      brand: 'Porsche',
+                      speed: 100,
+                      color: 'black',
+                      hasSunroof: true
+                    };
+                  </code></pre>
+                </li>
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Access to a property</h2>
+            <p>
+              <ul>
+                <li>
+                  There are two ways to retrieve the values of an object: with
+                  the member operator (dot notation) and with brackets.
+                </li>
+                <li>
+                  The member operator (a dot .) access to the value of the property
+                  with the name put in the right associated to the object put
+                  in the left.
+                  <pre><code class="hljs">
+                    var brandOfMyCar = myCar.brand;
+                    var currentSpeed = myCar.speed;
+
+                    console.log(aboutMe.hometown);
+                  </code></pre>
+                </li>
+                <li>
+                  With brackets, put the object name and closed in square brackets
+                  the key of property to retreive in string.
+                </li>
+              </ul>
+            </p>
+            <pre><code class="hljs">
+              var colorOfMyCar = myCar['color'];
+
+              var keyName = 'hairColor';
+              console.log(aboutMe[keyName]);
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Modifying properties</h2>
+            <p>
+              Using dot notation or brackets in combination with the assign operator
+              we can change the value of an object property.
+              <pre><code class="hljs">
+                myCar.color = 'white';
+
+                aboutMe['hairColor'] = 'gold';
+              </code></pre>
+
+              Also we can delete a property of an object with the word <em>delete</em>.
+
+              <pre><code class="hljs">
+                delete myCar.hasSunroof;
+                delete aboutMe['hometown'];
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <p>
+              <img data-src="img/chapter-2/hair-color.jpg" width="400">
+              <pre><code class="hljs">
+                me.hairStyle = 'very cool';
+                delete aboutMe.dignity;
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Object Methods</h2>
+            <p>
+              <ul>
+                <li>A method is an action that an object can execute.</li>
+                <li>Each method can be viewed as a property, but the value is a <em>anonymous function</em>.</li>
+                <li>
+                  The syntax is the same of the propety.
+                  <pre><code class="hljs">
+                    var myCar = {
+                      brand: 'Porsche',
+                      speed: 100,
+                      color: 'black',
+                      accelerate: function () {
+                        this.speed += 0.1;
+                      },
+                      break: function () {
+                        if (this.speed > 0) {
+                          this.speed -= 0.1;
+                        }
+                      }
+                    };
+                  </code></pre>
+                </li>
+                <li>
+                  The <em>this</em> variable in a method is a reference to object that in
+                  the owner.
+                </li>
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Execute a method</h2>
+            <p>
+              Execute an object method is similar to call a function but with the
+              member access with dot notation or brackets.
+              <pre><code class="hljs">
+                myCar.accelerate();
+              </code></pre>
+            </p>
+
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/_yH5iyn81Ks" frameborder="0" allowfullscreen></iframe>
+          </section>
+
+          <section>
+            <pre><code class="hljs">
+              var myCat = {
+                name: 'Daemon',
+                age: 1,
+                furColor: 'grey',
+                meow: function() {
+                  console.log('meowww');
+                }
+              };
+
+              myCat.eat = function (food) {
+                console.log('Yum, I love ' + food);
+              };
+            </code></pre>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/MMCl1fFmXUg" frameborder="0" allowfullscreen></iframe>
+            <pre><code class="hljs">
+              myCat.eat('Tia helen');
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Member types</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Property</td>
+                  <td>string</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>number</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>boolean</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>array</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>object</td>
+                </tr>
+                <tr>
+                  <td>Method</td>
+                  <td>function</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2>Example:</h2>
+            <pre><code class="hljs">
+              var me = {
+                hometown: 'CDMX, México',
+                hair: 'black',
+                wearGlasses: true,
+                birthday: { day: 2, month: 'September' },
+                grades: [ 10, 9, 10 ]
+                sayHello: function () {
+                  console.log('Hello!');
+                }
+              };
+
+              var myCar = {
+                brand: 'Porsche',
+                speed: 100,
+                color: 'black',
+                owner: me
+              };
+            </code></pre>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>

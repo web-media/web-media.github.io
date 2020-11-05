@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>JS Course | Chapter 1</title>
+
+    <meta name="description" content="Support material for the course Web media.">
+    <meta name="author" content="Diego Montesinos">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <section>
+          <h3>1. Introducción</h3>
+          <img width="500" data-src="img/chapter-1/globe.png">
+        </section>
+
+        <section>
+          <h3>Diego Montesinos</h3>
+          <img width="300" data-src="img/chapter-1/handsome.jpg">
+          <p>
+            <small><a href="http://diegomontesinos.tumblr.com">Tumblr</a></small><br>
+            <small><a href="http://github.com/diegoMontesinos">GitHub</a></small><br>
+            <small><a href="mailto:diegoa.montesinos@gmail.com">diegoa.montesinos@gmail.com</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h4>1.1. Conceptos básicos</h4>
+          <img width="750" data-src="img/chapter-2/internet.jpg">
+        </section>
+
+        <section>
+          <section>
+            <h4>1.1.1 Internet vs. Web</h4>
+            <img data-src="img/chapter-2/internetvstheweb.jpg">
+          </section>
+
+          <section>
+            <h2>Internet &ne; web</h2>
+            <p>
+              Aunque es común usar los conceptos como sinónimos, el Internet y
+              la web son conceptos diferentes.<br><br>
+              El <b>Internet</b>, es la red de redes de computadoras. Es enorme,
+              y comprende cada comunicación hecha por un grupo de computadoras.<br>
+              La <b>web</b> es solo una parte (una muy grande) de estas
+              comunicaciones.
+            </p>
+          </section>
+
+          <section>
+            <h2>Internet &ne; web</h2>
+            <p>
+              Puedes pensar que la web es un "subconjunto" del Internet.<br />
+              Pero, ¿cómo sabemos  que es web y que no es?
+              <img data-src="img/chapter-2/websubset.svg">
+            </p>
+          </section>
+
+          <section>
+            <h2>Protocolos de Red</h2>
+            <p>
+              Supón que en la noche tienes una cena con la Reina de Inglaterra.
+              "Espera a que la reina te extienda la mano para tomarla", nos dicen,
+              "Es parte del protocolo".
+              <img width="500" data-src="img/chapter-2/queen.jpg">
+            </p>
+          </section>
+
+          <section>
+            <h2>Protocolos de Red</h2>
+            <p>
+              Un protocolo de red es una lista de reglas que indican como dos o
+              mas computadoras deben transmitirse informacion.<br>
+              Las reglas permiten a una computadora entender los mensajes enviados
+              por otra y actual en consecuencia de esos mensajes.<br>
+              <img width="400" data-src="img/chapter-2/protocol.GIF"><br>
+            </p>
+          </section>
+
+          <section>
+            <h2>Internet &ne; web</h2>
+            <p>
+              La principal diferencia es:
+              <ol>
+                <li>
+                  On the Internet the data travels through network protocols:
+                  transfer files <i>(FTP)</i>, send mails <i>(SMTP)</i>, share
+                  files <i>BitTorrent</i>.
+                </li>
+                <li>
+                  The web is the Internet connections in which, the data travels
+                  through the HTTP protocol.
+                </li>
+              </ol>
+            </p>
+          </section>
+
+          <section>
+            <h2>HTTP Protocol</h2>
+            <p>
+              HTTP stands for HyperText Transfer Protocol. It is the FOUNDATION
+              OF THE MODERN WEB.<br>
+              <ul>
+                <li>HTTP it is based on a host-client architecture.</li>
+                <li> All communication between a host and a client occurs, via
+                a <u><b>request/response pair.</b></u></li>
+                <li>Uses TCP/IP protocols and the default port is 80.</li>
+                <li>The current version of the protocol is HTTP/1.1.</li>
+                <li>Has a security version: HTTPS</li>
+              </ul>
+              <img width="500" data-src="img/chapter-2/http1-req-res.png">
+            </p>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>
