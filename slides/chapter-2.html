@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 
     <style>
-      body .slides * {
-        transform: scale(0.85);
+      body .slides {
+        transform: scale(0.65);
       }
     </style>
   </head>
@@ -498,13 +498,11 @@
           <section>
             <h2>Condicionales (<code style="text-transform: lowercase;">if</code>)</h2>
             <p>
-              Los programas necesitan tomar decisiones (ejecutar o no un pedazo de codigo).<br />
-              Estas decisiones estan basadas en una condicion.<br />
-              Una <em>condicion</em> es una pregunta cuya respuesta es un valor
-              booleano:
-              <em>falso</em> o <em>verdadero</em>.<br /><br />
-              Con la instruccion <code>if</code> podemos hacer una condicional en
-              JS.
+              Los programas necesitan tomar decisiones (ejecutar o no un bloque de codigo).<br />
+              Esas decisiones estan basadas en una condición.<br />
+              Una condición es una pregunta cuya respuesta es un valor booleano:
+              <em>verdad</em> o <em>falso</em>.<br /><br />
+              Con la instruccion <code>if</code> podemos hacer una condicional en JS.
             </p>
             <pre><code class="hljs">
               if (condition) {
@@ -516,10 +514,10 @@
           <section>
             <p>Example (if):</p>
             <pre><code class="hljs">
-              const x = 5;
+              var x = 5;
 
               if (x > 0) {
-                console.log('x is a positive number!');
+                console.log('x es un numero positivo!');
               }
 
               if (isRaining()) {
@@ -560,6 +558,22 @@
                   <td>Menor que</td>
                   <td>n &lt; 31<br />n &lt; 23</td>
                 </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2>Operadores de comparacion</h2>
+            <pre><code class="hljs">const n = 28;</code></pre>
+            <table>
+              <thead>
+                <tr>
+                  <th>Simbolo</th>
+                  <th>Nombre</th>
+                  <th>Ejemplo</th>
+                </tr>
+              </thead>
+              <tbody>
                 <tr>
                   <td>&gt;=</td>
                   <td>Mayor o igual que</td>
@@ -575,7 +589,156 @@
           </section>
 
           <section>
-            <h2>Operadores logicos</h2>
+            <h2>Condicionales completas: <code style="text-transform: lowercase;">if-else</code></h2>
+            <p>
+              Si deseamos contemplar el caso negativo de una condicional, es decir,
+              queremos que se ejecute un codigo en el caso en el que falle una condicional
+              podemos hacer una condicional completa.
+            </p>
+            <pre><code class="hljs">
+              const age = 18;
+              if (age > 16) {
+                console.log('Yay, puedes manejar!');
+              } else {
+                console.log(`Perdon, pero tienes que esperar ${(16 - age)} años para manejar.`);
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Condicional multiple: <code style="text-transform: lowercase;">if-else if-else</code></h2>
+            <p>
+              Puede existir el caso en el que queramos analizar muchas posibles condiciones:
+            </p>
+            <pre><code class="hljs">
+              const age = 20;
+              if (age >= 35) {
+                console.log('You can vote AND hold any place in government!');
+              } else if (age >= 25) {
+                console.log('You can vote AND run for the Senate!');
+              } else if (age >= 18) {
+                console.log('You can vote!');
+              } else {
+                console.log('You have no voice in government!');
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Operadores lógicos</h2>
+            <p>
+              Imaginemos que queremos programar la siguiente lógica:
+              <em>"Una aseguradora le da un descuento a las personas que tiene entre
+                20 y 35 años de edad"</em>
+              <br /><br />
+              Supongamos que tenemos la edad de una persona guardada en una
+              constante, y deseamos reportar si la persona es acreedora al descuento:
+              <pre><code class="hljs">
+                const age = 18;
+
+                if (??) {
+                  console.log('Aplica descuento');
+                }
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Operadores lógicos - AND / Y</h2>
+            Los operandos de un operador lógico son valores booleanos. Este operador
+            trabaja con dos operandos.
+            <table>
+              <thead>
+                <tr>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>A && B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>true</code></td>
+                  <td><code>true</code></td>
+                  <td><code>true</code></td>
+                </tr>
+                <tr>
+                  <td><code>true</code></td>
+                  <td><code>false</code></td>
+                  <td><code>false</code></td>
+                </tr>
+                <tr>
+                  <td><code>false</code></td>
+                  <td><code>true</code></td>
+                  <td><code>false</code></td>
+                </tr>
+                <tr>
+                  <td><code>false</code></td>
+                  <td><code>false</code></td>
+                  <td><code>false</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2>Operadores lógicos - OR / O</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>A</th>
+                  <th>B</th>
+                  <th>A || B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>true</code></td>
+                  <td><code>true</code></td>
+                  <td><code>true</code></td>
+                </tr>
+                <tr>
+                  <td><code>true</code></td>
+                  <td><code>false</code></td>
+                  <td><code>true</code></td>
+                </tr>
+                <tr>
+                  <td><code>false</code></td>
+                  <td><code>true</code></td>
+                  <td><code>true</code></td>
+                </tr>
+                <tr>
+                  <td><code>false</code></td>
+                  <td><code>false</code></td>
+                  <td><code>false</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2>Operadores lógicos - NOT / NO</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>A</th>
+                  <th>!A</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>true</code></td>
+                  <td><code>false</code></td>
+                </tr>
+                <tr>
+                  <td><code>false</code></td>
+                  <td><code>true</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section>
+            <h2>Operadores lógicos</h2>
             <pre><code class="hljs">
               const a = 4;
               const b = -2;
@@ -583,9 +746,9 @@
             <table>
               <thead>
                 <tr>
-                  <th>Operator symbol</th>
-                  <th>Name</th>
-                  <th>Example</th>
+                  <th>Simbolo</th>
+                  <th>Nombre</th>
+                  <th>Ejemplo</th>
                 </tr>
               </thead>
               <tbody>
@@ -610,70 +773,37 @@
 
           <section>
             <p>
-              Can combining together multiple conditions (be careful with the
-              parenthesis):
+              Podemos combinar muchas condicionales:
             </p>
             <pre><code class="hljs">
-              var myAge = 28;
+              const myAge = 28;
 
               if ((myAge > 0 && myAge < 5) || (myAge > 70)) {
-                console.log('MB free!');
+                console.log('MB gratis!');
               }
             </code></pre>
           </section>
 
           <section>
-            <h2>Using values as <code style="text-transform: lowercase;">false</code></h2>
+            <h2>Usando valores como <code style="text-transform: lowercase;">false</code></h2>
             <p>
-              The empty string (''), the number 0, <code>undefined</code> and
-              <code>null</code> act as <code>false</code>.
+              La cadena vacia (''), el numero 0, y el valor <code>undefined</code>
+              actuan como <code>false</code>.
             </p>
             <pre><code class="hljs">
-              var name = '';
+              const name = '';
               if (name) {
-                console.log('Hello, ' + name);
+                console.log(`Hello ${name}`);
               }
 
-              var points = 0;
+              const points = 0;
               if (points) {
-                console.log('You have ' + points + ' points');
+                console.log(`You have ${points} points`);
               }
 
-              var firstName;
+              const firstName;
               if (firstName) {
-                console.log('Your name is ' + firstName);
-              }
-            </code></pre>
-          </section>
-
-          <section>
-            <h2>Complete conditionals: <code style="text-transform: lowercase;">if-else</code></h2>
-            <p>
-              To make a complete conditionals: code that is executed when the
-              condition is satisfied and code when not.
-            </p>
-            <pre><code class="hljs">
-              var age = 18;
-              if (age > 16) {
-                console.log('Yay, you can drive!');
-              } else {
-                console.log('Sorry, but you have ' + (16 - age) + ' years til you can drive.');
-              }
-            </code></pre>
-          </section>
-
-          <section>
-            <h2>Multiple conditionals: <code style="text-transform: lowercase;">if-else if-else</code></h2>
-            <pre><code class="hljs">
-              var age = 20;
-              if (age >= 35) {
-                console.log('You can vote AND hold any place in government!');
-              } else if (age >= 25) {
-                console.log('You can vote AND run for the Senate!');
-              } else if (age >= 18) {
-                console.log('You can vote!');
-              } else {
-                console.log('You have no voice in government!');
+                console.log(`Your name is ${firstName}`);
               }
             </code></pre>
           </section>
