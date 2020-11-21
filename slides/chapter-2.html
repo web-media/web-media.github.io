@@ -498,11 +498,13 @@
           <section>
             <h2>Condicionales (<code style="text-transform: lowercase;">if</code>)</h2>
             <p>
-              Los programas necesitan tomar decisiones (ejecutar o no un bloque de codigo).<br />
-              Esas decisiones estan basadas en una condición.<br />
-              Una condición es una pregunta cuya respuesta es un valor booleano:
-              <em>verdad</em> o <em>falso</em>.<br /><br />
-              Con la instruccion <code>if</code> podemos hacer una condicional en JS.
+              Los programas necesitan tomar decisiones (ejecutar o no un pedazo de codigo).<br />
+              Estas decisiones estan basadas en una condicion.<br />
+              Una <em>condicion</em> es una pregunta cuya respuesta es un valor
+              booleano:
+              <em>falso</em> o <em>verdadero</em>.<br /><br />
+              Con la instruccion <code>if</code> podemos hacer una condicional en
+              JS.
             </p>
             <pre><code class="hljs">
               if (condition) {
@@ -514,7 +516,7 @@
           <section>
             <p>Example (if):</p>
             <pre><code class="hljs">
-              var x = 5;
+              const x = 5;
 
               if (x > 0) {
                 console.log('x es un numero positivo!');
@@ -809,36 +811,69 @@
           </section>
 
           <section>
-            <h2>Iterations (<code style="text-transform: lowercase;">while</code>)</h2>
+            <h2>Iteraciones</h2>
             <p>
-              Repeat a task multiple times is make iterations.<br />
-              Are two ways to view the iterations: until a condition it no longer
-              satisfied or counting.<br /><br />
-              For the first way, JS use the statement <code>while</code>.
+              Imagina que queremos desplegar registros en una tabla con una coleccion
+              de datos.<br />
+              Podriamos dibujar fila por fila:
             </p>
             <pre><code class="hljs">
-              while (condition) {
-                // statements to repeat
-              }
+  const register1 = ...;
+  const register2 = ...;
+  const register3 = ...;
+
+  renderRow(register1);
+  renderRow(register2);
+  renderRow(register3);
+            </code></pre>
+            <p>
+              Como puedes ver esto se vuelve poco practico en caso de tener 1000
+              registros.
+            </p>
+          </section>
+
+          <section>
+            <h2>Iteraciones</h2>
+            <p>
+              Para repetir muchas veces una tarea (o un conjunto de lineas) usaremos
+              iteraciones.<br />
+              Existen dos formas de ver las iteraciones: hasta una condición deje
+              de cumplirse o contando.<br /><br />
+              Para la primer forma, en JS usamos la instruccion <code>while</code>.
+            </p>
+          </section>
+
+          <section>
+            <h2>Iteraciones con <code style="text-transform: lowercase;">while</code></h2>
+            <p>
+              En español, significa "mientras que", y su semantica puede ser leida
+              "mientras que se cumpla la condicion, repite estas lineas de codigo".
+            </p>
+            <pre><code class="hljs">
+  while (condition) {
+    // statements to repeat
+  }
             </code></pre>
             <pre><code class="hljs">
-              var x = 0;
-              while (x < 5) {
-                console.log(x);
-                x = x + 1;
-              }
+  var x = 0;
+  while (x < 5) {
+    console.log(x);
+    x = x + 1;
+  }
             </code></pre>
           </section>
 
           <section>
-            <h2>BEWARE INFINITE LOOPS</h2>
+            <h2>DEBES TENER CUIDADO CON LOS CICLOS INFINITOS</h2>
             <img data-src="img/chapter-2/infiniteloop.png">
           </section>
 
           <section>
-            <h2>Iterations (<code style="text-transform: lowercase;">for</code>)</h2>
+            <h2>Iteraciones con <code style="text-transform: lowercase;">for</code></h2>
             <p>
-              The other way to make iterations is counting.
+              La otra forma de hacer iteraciones es contando. Contar significa
+              empezar en un numero inicial, detenerse en un numero final y decidir
+              como llegar del inicio al final.
             </p>
             <pre><code class="hljs">
               for (initialize; condition; update) {
@@ -853,9 +888,10 @@
           </section>
 
           <section>
-            <h2>Break a loop</h2>
+            <h2>Romper un ciclo</h2>
             <p>
-              To prematurely exit a loop, use the <code>break</code> statement.
+              Para terminar prematuramente un ciclo, usamos la instruccion
+              <code>break</code>.
             </p>
             <pre><code class="hljs">
               for (var current = 100; current < 200; current++) {
@@ -869,31 +905,33 @@
           </section>
         </section>
 
-        <!-- 2.5.5 Arrays -->
         <section>
           <section>
-            <h2>2.5.5 JavaScript: Arrays</h2>
+            <h2>2.6 JavaScript: Arreglos</h2>
             <p>
-              For hold multiple values in one single variable we can use arrays.<br />
-              An array is a type of data-type that holds an ordered list of values,
-              of any type.
+              Para guardar multiples valores en una sola variable podemos usar
+              arreglos.<br />
+              Un arreglo (array) es un tipo de datos que guarda una lista ordenada
+              de valores, de cualquier tipo.
             </p>
             <img data-src="img/chapter-2/caj.jpg">
           </section>
 
           <section>
-            <h2>Syntax</h2>
+            <h2>Sintaxis</h2>
             <pre><code class="hljs">
-              var arrayName = [element0, element1, ...];
-              var arrayName = [];
+  const arrayName = [element0, element1, ...];
+  const arrayName = [];
             </code></pre>
             <pre><code class="hljs">
-              var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-              var raceWinners = [33, 72, 64];
-              var myFavoriteThings = ['Play guitar', 666, 'Web media course'];
+  const rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+  const raceWinners = [33, 72, 64];
+  const myFavoriteThings = ['Play guitar', 666, 'Web media course'];
             </code></pre>
-            <p>The <code>length</code> property reports the size of the array:</p>
-            <pre><code class="hljs">console.log(courseStudents.length);</code></pre>
+            <p>La propiedad <code>length</code> indica cual es el tamaño del arreglo:</p>
+            <pre><code class="hljs">
+  console.log(courseStudents.length);
+            </code></pre>
           </section>
 
           <section>
@@ -946,10 +984,9 @@
           </section>
         </section>
 
-        <!-- 2.5.6 Objects -->
         <section>
           <section>
-            <h2>2.5.6 JavaScript: Objects</h2>
+            <h2>2.7 JavaScript: Objetos</h2>
             <p>
               One of the most popular and useful concept in modern code is the
               objected-oriented programming (OOP).<br />
